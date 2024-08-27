@@ -1,0 +1,181 @@
+@import "./navbar.css";
+
+:root {
+  --black: #021526;
+  --navy: #03346e;
+  --blue: #6eacda;
+  --beige: #e2e2b6;
+  --teal: #2dd4bf;
+
+  --mobile: 640px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1280px;
+}
+
+@keyframes avatar-appears {
+  0% {
+    left: 0px;
+    opacity: 0;
+  }
+  100% {
+    /* bottom: 130px; */
+    top: 105px;
+    left: 35px;
+  }
+}
+
+@keyframes title-appears {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+  100% {
+    top: -17px;
+  }
+}
+
+@keyframes bottom-content-appears {
+  0% {
+    top: 415px;
+    opacity: 0;
+  }
+  100% {
+    top: 400px;
+  }
+}
+
+#avatar-container {
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 200px;
+  background-image: url("../assets/dev_avatar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 105px;
+  left: 35px;
+  position: absolute;
+  animation: avatar-appears 1s ease forwards;
+}
+
+#wt-btn {
+  background-color: transparent;
+  border: solid 1px var(--teal);
+  width: 180px;
+  height: 60px;
+  color: var(--teal);
+  transition: all 0.2s;
+}
+
+#wt-btn:hover {
+  background-color: white;
+}
+
+#banner-content {
+  position: relative;
+  left: 400px;
+}
+
+#aboutme-btn {
+  background-color: transparent;
+  border: solid 1px var(--teal);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: var(--teal);
+  transition: all 0.2s;
+}
+
+#aboutme-btn:hover {
+  background: white;
+}
+
+#title-content {
+  position: absolute;
+  top: -17px;
+  animation: title-appears 1s ease forwards;
+}
+
+#bottom-content {
+  position: absolute;
+  top: 400px;
+  animation: bottom-content-appears 1s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #banner {
+    height: 470px;
+  }
+  @keyframes avatar-appears {
+    0% {
+      left: 0px;
+      opacity: 0;
+    }
+    100% {
+      left: 27px;
+      top: 132px;
+    }
+  }
+
+  @keyframes title-appears {
+    0% {
+      top: 0px;
+      opacity: 0;
+    }
+    100% {
+      top: -17px;
+    }
+  }
+
+  @keyframes bottom-content-appears {
+    0% {
+      top: 192px;
+      opacity: 0;
+    }
+    100% {
+      top: 182px;
+    }
+  }
+  #banner-content {
+    left: 0;
+    top: 132px;
+    padding: 20px;
+  }
+
+  #animatedParagraph {
+    font-size: 2rem;
+    line-height: 1.5;
+    position: absolute;
+    top: 42px;
+  }
+
+  #avatar-container {
+    width: 200px;
+    height: 200px;
+    left: 27px;
+    top: 132px;
+  }
+
+  #bottom-content {
+    top: 182px;
+  }
+
+  #wt-btn {
+    width: 150px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  #animatedParagraph {
+    font-size: 1.5rem;
+  }
+
+  #avatar-container {
+    width: 150px;
+    height: 150px;
+  }
+}
