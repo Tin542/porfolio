@@ -9,6 +9,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./js/tailwind.config.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -46,53 +48,115 @@
         </div>
     </nav>
     <!-- MAIN -->
-    <!-- BANNER -->
-    <section id="banner" class="bg-black h-[521px]">
-        <div class="flex flex-wrap text-white w-full gap-5 justify-start items-center gap-[20px]">
-            <div class="items-center p-5">
-                <div id="avatar-container">
+    <div class="flex-row">
+        <!-- BANNER -->
+        <section id="banner" class="bg-black h-[521px]">
+            <div class="flex flex-wrap text-white w-full gap-5 justify-start items-center gap-[20px]">
+                <div class="items-center p-5">
+                    <div id="avatar-container">
+                    </div>
+                </div>
+                <div class="items-center p-5 w-[60rem] gap-3" id="banner-content">
+                    <div class="flex justify-start items-center gap-3 mt-5" id="title-content">
+                        <div id="cross-line" class="border-2 border-teal w-[100px]"></div>
+                        <div class="text-teal text-lg">Hi there, Im Tín</div>
+                    </div>
+                    <p class="text-7xl text-beige leading-[100px]" id="animatedParagraph">I am a Fullstack Developer
+                        focused
+                        on building efficient
+                        APIs and intuitive interfaces.</p>
+                    <div class="flex justify-start items-center gap-3 mt-5" id="bottom-content">
+                        <button id="aboutme-btn">
+                            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="text-white text-lg">More about me</div>
+                    </div>
                 </div>
             </div>
-            <div class="items-center p-5 w-[60rem] gap-3" id="banner-content">
-                <div class="flex justify-start items-center gap-3 mt-5" id="title-content">
-                    <div id="cross-line" class="border-2 border-teal w-[100px]"></div>
-                    <div class="text-teal text-lg">Hi there, Im Tín</div>
+        </section>
+        <!-- ABOUT ME -->
+        <section id="about-me" class="laptop:px-[200px] mt-5 bg-white h-[430px]">
+            <div class="p-5 flex-col justify-start items-center gap-10">
+                <div class="border-black border-l-4 px-3">
+                    <h1 class="text-5xl text-beige font-semibold">ABOUT ME</h1>
                 </div>
-                <p class="text-7xl text-beige leading-[100px]" id="animatedParagraph">I am a Fullstack Developer focused
-                    on building efficient
-                    APIs and intuitive interfaces.</p>
-                <div class="flex justify-start items-center gap-3 mt-5" id="bottom-content">
-                    <button id="aboutme-btn">
-                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
-                    </button>
-                    <div class="text-white text-lg">More about me</div>
+
+                <p class="text-xl leading-[50px] font-normal text-black mt-5">
+                    My name is Nguyễn Thành Tín, a dedicated Fullstack Developer with a strong foundation in Node.js,
+                    NestJS, and NextJS. I hold a degree from FPT University, where I developed expertise in various
+                    programming languages, including JavaScript, Java, C, and TypeScript. My technical skill set extends
+                    to
+                    front-end frameworks like ReactJS and backend technologies such as ExpressJS, along with a
+                    comprehensive
+                    understanding of database management, covering SQL Server, MongoDB, MySQL, and PostgreSQL.
+                </p>
+                <p class="text-xl leading-[50px] font-normal text-black">I am committed to advancing my career, aiming
+                    to
+                    achieve a senior developer role in the near future, with
+                    a long-term goal of stepping into a leadership position. Beyond coding, I have a passion for gaming,
+                    enjoy watching movies, and cherish spending time with friends whenever possible. These hobbies help
+                    me
+                    maintain a well-rounded life and inspire creativity in my professional work.</p>
+            </div>
+        </section>
+
+        <!-- PROJECT -->
+        <section id="project" class="bg-black h-auto mt-5">
+            <div class="items-center justify-center">
+                <div class="py-3 mt-5 text-center">
+                    <h1 class="text-5xl text-white font-semibold">MY PROJECTS</h1>
+                </div>
+                <div class="flex justify-center items-center flex-wrap p-3 mt-5 gap-5">
+                    <a href="https://bookstore-tinnt.vercel.app/home" id="project-card"
+                        class="max-w-sm rounded overflow-hidden bg-white relative group">
+                        <img class="w-full" src="./assets/bookstore.png" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">BOOKSTORE</div>
+                            <p class="text-gray-700 text-base">
+                                An online bookstore using an MVC model for the admin page to manage inventory and orders
+                                efficiently, and a client-server model for the customer page to handle user interactions
+                                and
+                                transactions seamlessly.
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">ReactJS</span>
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">NestJS</span>
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Postgres</span>
+                        </div>
+                        <div
+                            class="overlay absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Learn More
+                        </div>
+                    </a>
+                    <a href="https://duel-monster-game.vercel.app/" id="project-card"
+                        class="max-w-sm rounded overflow-hidden bg-white relative group">
+                        <img class="w-full" src="./assets/duelmonster.png" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">DUEL MONSTER GAME</div>
+                            <p class="text-gray-700 text-base">
+                                A game written in ReactJS based on the rules of Duel Monsters from the Yu-Gi-Oh! anime.
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span
+                                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">ReactJS</span>
+                        </div>
+                        <div
+                            class="overlay absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Learn More
+                        </div>
+                    </a>
+
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- ABOUT ME -->
-    <section id="about-me" class="laptop:px-[200px] mt-5 bg-white h-[430px]">
-        <div class="p-5 flex-col justify-start items-center gap-10">
-            <div class="border-black border-l-4 px-3">
-                <h1 class="text-5xl text-beige font-semibold">ABOUT ME</h1>
-            </div>
-
-            <p class="text-xl leading-[50px] font-normal text-black mt-5">
-                My name is Nguyễn Thành Tín, a dedicated Fullstack Developer with a strong foundation in Node.js,
-                NestJS, and NextJS. I hold a degree from FPT University, where I developed expertise in various
-                programming languages, including JavaScript, Java, C, and TypeScript. My technical skill set extends to
-                front-end frameworks like ReactJS and backend technologies such as ExpressJS, along with a comprehensive
-                understanding of database management, covering SQL Server, MongoDB, MySQL, and PostgreSQL.
-            </p>
-            <p class="text-xl leading-[50px] font-normal text-black">I am committed to advancing my career, aiming to
-                achieve a senior developer role in the near future, with
-                a long-term goal of stepping into a leadership position. Beyond coding, I have a passion for gaming,
-                enjoy watching movies, and cherish spending time with friends whenever possible. These hobbies help me
-                maintain a well-rounded life and inspire creativity in my professional work.</p>
-        </div>
-    </section>
 
 
+        </section>
+    </div>
     <!-- FOOTER -->
 
     <script type="text/javascript" src="./js/index.js"></script>
